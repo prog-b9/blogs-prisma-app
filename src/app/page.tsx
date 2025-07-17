@@ -13,6 +13,7 @@ export default async function Home() {
         <div className="h-5"></div>
         <UserSection data={users} />
       </div>
+
       <div className="p-10">
         <div className="text-3xl">Blogs</div>
         <div className="h-5"></div>
