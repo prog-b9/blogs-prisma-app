@@ -5,7 +5,6 @@ import { createBlogPost } from "@/actions/blogs.action";
 import { useState, FormEvent } from "react";
 
 export default function BlogsForm({ users }: any) {
-  console.log("first", users);
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [content, setContent] = useState("");
