@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Header = () => {
+  const pathname = usePathname();
+  const isAdmin = pathname.includes("admin");
+
   const links = [
     {
       label: "Users",
@@ -15,7 +20,15 @@ const Header = () => {
       icon: "",
       target: "",
     },
+    {
+      label: "Dashboard",
+      url: "/admin/dashboard",
+      icon: "",
+      target: "",
+    },
   ];
+  if (isAdmin) return;
+
   return (
     <header className="bg-white dark:bg-gray-900 w-10/12 rounded-full mx-auto my-5">
       <div className=" px-4 sm:px-6 lg:px-8">
